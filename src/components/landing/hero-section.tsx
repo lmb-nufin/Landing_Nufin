@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ShieldCheck, Star } from "lucide-react";
-import { GooglePlayIcon } from "@/components/icons/google-play";
+import { GooglePlayButton } from "./google-play-button";
 
 const HeroImage: React.FC = () => {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
@@ -47,13 +47,7 @@ export function HeroSection() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#aplicar" className="flex items-center gap-3 px-6 py-4 bg-gray-900 text-white rounded-2xl shadow-lg shadow-gray-900/30 hover:scale-105 hover:shadow-xl active:scale-95 transition-all duration-300">
-              <GooglePlayIcon className="h-8 w-8" />
-              <div className="text-left">
-                <span className="text-[10px] uppercase font-bold opacity-80 tracking-widest">Disponible en</span>
-                <span className="text-lg font-display font-black block leading-none mt-1">Google Play</span>
-              </div>
-            </a>
+            <GooglePlayButton />
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-4">

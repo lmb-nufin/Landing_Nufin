@@ -6,7 +6,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./logo";
 import { Button } from '../ui/button';
-import { GooglePlayIcon } from "@/components/icons/google-play";
+import { GooglePlayButton } from './google-play-button';
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
@@ -35,13 +35,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <a href="#aplicar" className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl shadow-md shadow-gray-900/20 hover:bg-gray-800 transition-all">
-            <GooglePlayIcon className="w-5 h-5" />
-            <div className="text-left leading-none">
-              <span className="block text-[9px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
-              <span className="block text-base font-bold">Google Play</span>
-            </div>
-          </a>
+          <GooglePlayButton size="small" />
         </nav>
 
         <div className="md:hidden">
@@ -65,13 +59,7 @@ export function Navbar() {
                     {link.label}
                   </Link>
                 ))}
-                <a href="#aplicar" className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl shadow-md shadow-gray-900/20 hover:bg-gray-800 transition-all">
-                  <GooglePlayIcon className="w-5 h-5" />
-                  <div className="text-left leading-none">
-                    <span className="block text-[9px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
-                    <span className="block text-base font-bold">Google Play</span>
-                  </div>
-                </a>
+                <GooglePlayButton />
               </nav>
             </SheetContent>
           </Sheet>
