@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react';
 import Link from "next/link";
+import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./logo";
-import { GooglePlayIcon } from "@/components/icons/google-play";
 import { Button } from '../ui/button';
 
 const navLinks = [
@@ -36,7 +36,7 @@ export function Navbar() {
             </Link>
           ))}
           <a href="#aplicar" className="flex items-center gap-2 px-6 py-2.5 bg-electric text-white rounded-full shadow-lg shadow-electric/20 hover:bg-electric-dark transition-all">
-            <GooglePlayIcon className="w-5 h-5" />
+            <Image src="/images/playstorelogo.png" alt="Google Play" width={20} height={20} />
             <div className="text-left leading-none">
               <span className="block text-[10px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
               <span className="block text-sm font-bold">Google Play</span>
@@ -66,7 +66,7 @@ export function Navbar() {
                   </Link>
                 ))}
                 <a href="#aplicar" className="flex items-center gap-2 px-6 py-2.5 bg-electric text-white rounded-full shadow-lg shadow-electric/20 hover:bg-electric-dark transition-all">
-                  <GooglePlayIcon className="w-5 h-5" />
+                  <Image src="/images/playstorelogo.png" alt="Google Play" width={20} height={20} />
                   <div className="text-left leading-none">
                     <span className="block text-[10px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
                     <span className="block text-sm font-bold">Google Play</span>

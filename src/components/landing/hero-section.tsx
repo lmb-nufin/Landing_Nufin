@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { GooglePlayIcon } from "../icons/google-play";
 import { ShieldCheck, Star } from "lucide-react";
 
 const HeroImage: React.FC = () => {
@@ -48,7 +47,7 @@ export function HeroSection() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <a href="#aplicar" className="flex items-center gap-3 px-8 py-5 bg-electric text-white rounded-3xl shadow-2xl shadow-electric/30 hover:scale-105 active:scale-95 transition-all duration-300">
-              <GooglePlayIcon className="w-10 h-10" />
+              <Image src="/images/playstorelogo.png" alt="Disponible en Google Play" width={40} height={40} />
               <div className="text-left">
                 <span className="text-[10px] uppercase font-bold opacity-80 tracking-widest">Disponible en</span>
                 <span className="text-xl font-display font-black block leading-none mt-1">Google Play</span>

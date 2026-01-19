@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "Una ilustración de una persona usando la app de Nufin en su celular.",
-      "imageUrl": "/images/hero-placeholder.svg",
-      "imageHint": "illustration person phone"
+      "description": "Una persona usando la app de Nufin en su celular.",
+      "imageUrl": "/images/hero.png",
+      "imageHint": "person phone"
     }
   ]
 }
