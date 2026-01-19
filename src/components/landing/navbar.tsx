@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react';
 import Link from "next/link";
-import Image from "next/image";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./logo";
 import { Button } from '../ui/button';
+import { GooglePlayIcon } from "@/components/icons/google-play";
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
@@ -35,11 +35,11 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <a href="#aplicar" className="flex items-center gap-2 px-6 py-2.5 bg-electric text-white rounded-full shadow-lg shadow-electric/20 hover:bg-electric-dark transition-all">
-            <Image src="/images/playstorelogo.png" alt="Google Play" width={20} height={20} />
+          <a href="#aplicar" className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl shadow-md shadow-gray-900/20 hover:bg-gray-800 transition-all">
+            <GooglePlayIcon className="w-5 h-5" />
             <div className="text-left leading-none">
-              <span className="block text-[10px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
-              <span className="block text-sm font-bold">Google Play</span>
+              <span className="block text-[9px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
+              <span className="block text-base font-bold">Google Play</span>
             </div>
           </a>
         </nav>
@@ -65,11 +65,11 @@ export function Navbar() {
                     {link.label}
                   </Link>
                 ))}
-                <a href="#aplicar" className="flex items-center gap-2 px-6 py-2.5 bg-electric text-white rounded-full shadow-lg shadow-electric/20 hover:bg-electric-dark transition-all">
-                  <Image src="/images/playstorelogo.png" alt="Google Play" width={20} height={20} />
+                <a href="#aplicar" className="flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-xl shadow-md shadow-gray-900/20 hover:bg-gray-800 transition-all">
+                  <GooglePlayIcon className="w-5 h-5" />
                   <div className="text-left leading-none">
-                    <span className="block text-[10px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
-                    <span className="block text-sm font-bold">Google Play</span>
+                    <span className="block text-[9px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
+                    <span className="block text-base font-bold">Google Play</span>
                   </div>
                 </a>
               </nav>

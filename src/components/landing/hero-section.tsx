@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { ShieldCheck, Star } from "lucide-react";
+import { GooglePlayIcon } from "@/components/icons/google-play";
 
 const HeroImage: React.FC = () => {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
@@ -10,11 +11,11 @@ const HeroImage: React.FC = () => {
   return (
     <div className="relative w-full h-full bg-white group flex items-center justify-center">
         <Image 
-          src={heroImage?.imageUrl || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"} 
-          alt={heroImage?.description || "A smiling woman in a business suit, looking at her phone."}
+          src={heroImage?.imageUrl || "/images/hero-placeholder.svg"} 
+          alt={heroImage?.description || "A person using the Nufin app on their phone."}
           fill
-          className="object-cover transition-transform duration-1000 hover:scale-[1.02]"
-          data-ai-hint={heroImage?.imageHint || "woman business"}
+          className="object-contain transition-transform duration-1000 hover:scale-[1.02]"
+          data-ai-hint={heroImage?.imageHint || "person phone"}
         />
         
         <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-md p-4 pr-8 rounded-2xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] animate-float hidden md:flex items-center gap-4 z-30 pointer-events-none">
@@ -46,11 +47,11 @@ export function HeroSection() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <a href="#aplicar" className="flex items-center gap-3 px-8 py-5 bg-electric text-white rounded-3xl shadow-2xl shadow-electric/30 hover:scale-105 active:scale-95 transition-all duration-300">
-              <Image src="/images/playstorelogo.png" alt="Disponible en Google Play" width={40} height={40} />
+            <a href="#aplicar" className="flex items-center gap-3 px-6 py-4 bg-gray-900 text-white rounded-2xl shadow-lg shadow-gray-900/30 hover:scale-105 hover:shadow-xl active:scale-95 transition-all duration-300">
+              <GooglePlayIcon className="h-8 w-8" />
               <div className="text-left">
                 <span className="text-[10px] uppercase font-bold opacity-80 tracking-widest">Disponible en</span>
-                <span className="text-xl font-display font-black block leading-none mt-1">Google Play</span>
+                <span className="text-lg font-display font-black block leading-none mt-1">Google Play</span>
               </div>
             </a>
           </div>
