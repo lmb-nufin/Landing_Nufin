@@ -37,17 +37,19 @@ export function HeroSection() {
     <section id="inicio" className="relative pt-32 pb-12 lg:pt-48 lg:pb-32 px-6 bg-[#F8F7FF] overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-center relative z-10">
         <div className="space-y-8 lg:space-y-12 order-2 lg:order-1 text-center lg:text-left">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-900 leading-[1.05]">
-              Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-500 font-medium max-w-xl mx-auto lg:mx-0">
-              De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$9,000 MXN</span> directos a tu cuenta desde tu celular.
-            </p>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <GooglePlayButton className="w-44" />
+          <div className="space-y-4">
+            <div className="space-y-6">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-900 leading-[1.05]">
+                Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
+              </h1>
+              <p className="text-lg md:text-xl text-gray-500 font-medium max-w-xl mx-auto lg:mx-0">
+                De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$9,000 MXN</span> directos a tu cuenta desde tu celular.
+              </p>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <GooglePlayButton className="w-44" />
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-4">
