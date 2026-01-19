@@ -18,13 +18,13 @@ export function MissionSection() {
                  </p>
               </div>
               <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
-                 <div className="p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 text-center">
+                 <div className="p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 flex flex-col items-center justify-center">
                     <h4 className="text-5xl font-display font-black text-gray-900 mb-2">100%</h4>
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Digital y Seguro</p>
+                    <p className="text-xs font-bold text-gray-400 uppercase tracking-widest text-center">Digital y Seguro</p>
                  </div>
-                 <div className="p-10 bg-electric text-white rounded-[2.5rem] shadow-2xl shadow-electric/20 text-center">
+                 <div className="p-10 bg-electric text-white rounded-[2.5rem] shadow-2xl shadow-electric/20 flex flex-col items-center justify-center">
                     <h4 className="text-5xl font-display font-black mb-2">24/7</h4>
-                    <p className="text-xs font-bold opacity-80 uppercase tracking-widest">Disponibilidad</p>
+                    <p className="text-xs font-bold opacity-80 uppercase tracking-widest text-center">Disponibilidad</p>
                  </div>
               </div>
            </div>
