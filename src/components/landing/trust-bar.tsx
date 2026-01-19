@@ -14,8 +14,8 @@ export function TrustBar() {
   const stats = [
     { 
       label: "Descargas", 
-      value: "1M", 
-      suffix: "+",
+      value: "1", 
+      suffix: "M+",
       subtext: "En Google Play",
       icon: <Smartphone className="w-5 h-5 md:w-6 md:h-6" />,
       color: "text-blue-600",
