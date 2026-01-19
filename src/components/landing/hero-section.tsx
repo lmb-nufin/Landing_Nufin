@@ -11,14 +11,14 @@ const HeroImage: React.FC = () => {
   return (
     <div className="relative w-full h-full bg-white group flex items-center justify-center">
         <Image 
-          src={heroImage?.imageUrl || "https://storage.googleapis.com/studiogpt-pro-dev.appspot.com/v1/projects/e85f5249-f0fc-4b35-85c1-2364c39f1954/generations/516a5ac6-e7e2-416b-9c7e-85e79391acb2-source.png"} 
-          alt={heroImage?.description || "An illustration of a woman sitting on a chair, using a tablet for financial services."}
+          src={heroImage?.imageUrl || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"} 
+          alt={heroImage?.description || "A smiling woman in a business suit, looking at her phone."}
           fill
-          className="object-contain p-4 md:p-8 transition-transform duration-1000 hover:scale-[1.02]"
-          data-ai-hint={heroImage?.imageHint}
+          className="object-cover transition-transform duration-1000 hover:scale-[1.02]"
+          data-ai-hint={heroImage?.imageHint || "woman business"}
         />
         
-        <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-md p-4 pr-8 rounded-2xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] animate-float hidden md:flex items-center gap-4 z-30 border border-white/50 pointer-events-none">
+        <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-md p-4 pr-8 rounded-2xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] animate-float hidden md:flex items-center gap-4 z-30 pointer-events-none">
             <div className="w-12 h-12 bg-[#DCFCE7] rounded-full flex items-center justify-center text-[#16A34A] shadow-sm flex-shrink-0">
               <span className="font-display font-black text-xl">$</span>
             </div>
