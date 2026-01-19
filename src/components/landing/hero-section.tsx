@@ -1,30 +1,21 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from 'react';
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { GooglePlayIcon } from "../icons/google-play";
 import { ShieldCheck, Star } from "lucide-react";
 
 const HeroImage: React.FC = () => {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
-  const [imgSrc, setImgSrc] = useState(heroImage?.imageUrl || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop");
-  const [hasError, setHasError] = useState(!heroImage);
 
   return (
     <div className="relative w-full h-full bg-white group flex items-center justify-center">
         <Image 
-          src={imgSrc} 
-          alt={heroImage?.description || "Hero image"}
+          src={heroImage?.imageUrl || "https://storage.googleapis.com/studiogpt-pro-dev.appspot.com/v1/projects/e85f5249-f0fc-4b35-85c1-2364c39f1954/generations/516a5ac6-e7e2-416b-9c7e-85e79391acb2-source.png"} 
+          alt={heroImage?.description || "An illustration of a woman sitting on a chair, using a tablet for financial services."}
           fill
-          className="object-cover transition-transform duration-1000 hover:scale-[1.02]"
+          className="object-contain p-4 md:p-8 transition-transform duration-1000 hover:scale-[1.02]"
           data-ai-hint={heroImage?.imageHint}
-          onError={() => {
-             if (!hasError) {
-               setImgSrc("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop");
-               setHasError(true);
-             }
-          }}
         />
         
         <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-md p-4 pr-8 rounded-2xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] animate-float hidden md:flex items-center gap-4 z-30 border border-white/50 pointer-events-none">
