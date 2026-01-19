@@ -1,69 +1,77 @@
 "use client";
 
+import React, { useState } from 'react';
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Logo } from "./logo";
 import { GooglePlayIcon } from "@/components/icons/google-play";
+import { Button } from '../ui/button';
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
   { href: "#como-funciona", label: "Cómo funciona" },
-  { href: "#servicio-cliente", label: "Servicio al cliente" },
+  { href: "#servicio", label: "Servicio al cliente" },
   { href: "#nosotros", label: "Sobre nosotros" },
 ];
 
 export function Navbar() {
-  return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
-        <div className="flex items-center gap-6">
-          <Logo />
-          <nav className="hidden md:flex md:gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-foreground/70 transition-colors hover:text-primary"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-        <div className="hidden items-center gap-4 md:flex">
-          <Button className="rounded-full" variant="outline">
-            <GooglePlayIcon className="mr-2 h-4 w-4" />
-            Disponible en Google Play
-          </Button>
-        </div>
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm h-16 md:h-20">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 h-full flex justify-between items-center">
+        <Link href="/" className="flex items-center">
+          <Logo className="h-8 md:h-11" />
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-bold text-gray-600 hover:text-electric transition-colors"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <a href="#aplicar" className="flex items-center gap-2 px-6 py-2.5 bg-electric text-white rounded-full shadow-lg shadow-electric/20 hover:bg-electric-dark transition-all">
+            <GooglePlayIcon className="w-5 h-5" />
+            <div className="text-left leading-none">
+              <span className="block text-[10px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
+              <span className="block text-sm font-bold">Google Play</span>
+            </div>
+          </a>
+        </nav>
 
         <div className="md:hidden">
-          <Sheet>
+          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
-              <nav className="grid gap-6 text-lg font-medium">
-                <Logo />
+              <nav className="grid gap-6 text-lg font-medium p-6">
+                <Logo className="h-10" />
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     className="text-foreground/70 transition-colors hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     {link.label}
                   </Link>
                 ))}
-                <Button className="rounded-full" variant="outline">
-                    <GooglePlayIcon className="mr-2 h-4 w-4" />
-                    Google Play
-                </Button>
+                <a href="#aplicar" className="flex items-center gap-2 px-6 py-2.5 bg-electric text-white rounded-full shadow-lg shadow-electric/20 hover:bg-electric-dark transition-all">
+                  <GooglePlayIcon className="w-5 h-5" />
+                  <div className="text-left leading-none">
+                    <span className="block text-[10px] font-medium opacity-80 uppercase tracking-tighter">Disponible en</span>
+                    <span className="block text-sm font-bold">Google Play</span>
+                  </div>
+                </a>
               </nav>
             </SheetContent>
           </Sheet>

@@ -2,21 +2,11 @@ import type { SVGProps } from "react";
 
 export function GooglePlayIcon(props: SVGProps<SVGSVGElement>) {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      {...props}
-    >
-      <path d="M3 7.5L3 16.5C3 17.3284 3.67157 18 4.5 18L13.5 18C14.3284 18 15 17.3284 15 16.5L15 7.5C15 6.67157 14.3284 6 13.5 6L4.5 6C3.67157 6 3 6.67157 3 7.5Z" />
-      <path d="M8 9L11 11.5L8 14" />
-      <path d="M16.5 10.5L19.5 12L16.5 13.5V10.5Z" />
+    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path fill="#4285F4" d="M325.3 234.3L104.6 13l280.5 161.2-59.8 60.1z" />
+      <path fill="#34A853" d="M47.4 14.5C43.8 20.8 42 29.6 42 39.9v432.2c0 10.3 1.8 19.1 5.4 25.4l254.8-254.9L47.4 14.5z" />
+      <path fill="#EA4335" d="M104.6 499l220.7-220.7 59.8 60.1L104.6 499z" />
+      <path fill="#FBBC04" d="M380.1 278.4l112.5-64.6c27.3-15.6 27.3-41.2 0-56.9l-107.4-61.6-59.8 60.1 54.7 123z" />
     </svg>
   );
 }

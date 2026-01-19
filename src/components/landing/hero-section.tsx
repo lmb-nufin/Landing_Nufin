@@ -1,72 +1,95 @@
+"use client";
+
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { useState } from 'react';
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { GooglePlayIcon } from "../icons/google-play";
-import { Banknote, ShieldCheck, Star } from "lucide-react";
+import { ShieldCheck, Star } from "lucide-react";
 
-export function HeroSection() {
+const HeroImage: React.FC = () => {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
+  const [imgSrc, setImgSrc] = useState(heroImage?.imageUrl || "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop");
+  const [hasError, setHasError] = useState(!heroImage);
 
   return (
-    <section id="inicio" className="relative w-full overflow-hidden bg-transparent py-20 md:py-32">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <div className="max-w-xl text-center lg:text-left">
-            <h1 className="text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl md:text-7xl">
-              Préstamos al instante,{" "}
-              <span className="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">
-                sin buró
-              </span>
+    <div className="relative w-full h-full bg-white group flex items-center justify-center">
+        <Image 
+          src={imgSrc} 
+          alt={heroImage?.description || "Hero image"}
+          fill
+          className="object-cover transition-transform duration-1000 hover:scale-[1.02]"
+          data-ai-hint={heroImage?.imageHint}
+          onError={() => {
+             if (!hasError) {
+               setImgSrc("https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop");
+               setHasError(true);
+             }
+          }}
+        />
+        
+        <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-md p-4 pr-8 rounded-2xl shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] animate-float hidden md:flex items-center gap-4 z-30 border border-white/50 pointer-events-none">
+            <div className="w-12 h-12 bg-[#DCFCE7] rounded-full flex items-center justify-center text-[#16A34A] shadow-sm flex-shrink-0">
+              <span className="font-display font-black text-xl">$</span>
+            </div>
+            <div>
+              <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-tight mb-1">Depósito Recibido</p>
+              <p className="text-2xl font-display font-black text-gray-900 leading-none tracking-tight">$5,000.00</p>
+            </div>
+        </div>
+    </div>
+  );
+};
+
+
+export function HeroSection() {
+  return (
+    <section id="inicio" className="relative pt-32 pb-12 lg:pt-48 lg:pb-32 px-6 bg-[#F8F7FF] overflow-hidden">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-center relative z-10">
+        <div className="space-y-8 lg:space-y-12 order-2 lg:order-1 text-center lg:text-left">
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-900 leading-[1.05]">
+              Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
             </h1>
-            <p className="mt-6 text-lg text-foreground/80 md:text-xl">
-              De $500 a $9,000 MXN directos a tu cuenta desde tu celular.
+            <p className="text-lg md:text-xl text-gray-500 font-medium max-w-xl mx-auto lg:mx-0">
+              De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$9,000 MXN</span> directos a tu cuenta desde tu celular.
             </p>
-            <div className="mt-10 flex flex-col items-center gap-6 sm:justify-center lg:justify-start">
-              <Button size="lg" className="h-14 rounded-2xl px-8 text-lg font-bold text-white bg-gradient-to-r from-[#A68BFF] to-[#896BFF] hover:opacity-90 transition-opacity">
-                <GooglePlayIcon className="mr-3 h-7 w-7" />
-                DISPONIBLE EN Google Play
-              </Button>
-              <div className="flex items-center gap-6">
-                <div className="flex items-center gap-1">
-                  <div className="flex items-center text-yellow-400">
-                    <Star fill="currentColor" className="h-5 w-5" />
-                    <Star fill="currentColor" className="h-5 w-5" />
-                    <Star fill="currentColor" className="h-5 w-5" />
-                    <Star fill="currentColor" className="h-5 w-5" />
-                    <Star fill="currentColor" className="h-5 w-5" />
-                  </div>
-                  <span className="text-sm font-bold">4.9</span>
-                </div>
-                 <div className="flex items-center gap-2 text-sm font-semibold text-green-600">
-                    <ShieldCheck className="h-5 w-5"/>
-                    <span>EN NIVEL GARANTIZADO</span>
-                </div>
-              </div>
-            </div>
           </div>
-          <div className="relative mx-auto h-[26rem] w-[22rem] lg:h-[32rem] lg:w-[26rem]">
-            <div className="w-full h-full p-2 rounded-3xl bg-white shadow-2xl shadow-primary/20 border">
-                 {heroImage && (
-                    <Image
-                        src={heroImage.imageUrl}
-                        alt={heroImage.description}
-                        width={600}
-                        height={800}
-                        className="h-full w-full rounded-2xl object-cover"
-                        data-ai-hint={heroImage.imageHint}
-                        priority
-                    />
-                )}
-            </div>
-            <div className="absolute -bottom-5 right-5 flex items-center gap-3 rounded-full bg-white p-3 pr-5 shadow-lg border">
-                <div className="rounded-full bg-green-100 p-2">
-                    <Banknote className="h-6 w-6 text-green-600" />
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <a href="#aplicar" className="flex items-center gap-3 px-8 py-5 bg-electric text-white rounded-3xl shadow-2xl shadow-electric/30 hover:scale-105 active:scale-95 transition-all duration-300">
+              <GooglePlayIcon className="w-10 h-10" />
+              <div className="text-left">
+                <span className="text-[10px] uppercase font-bold opacity-80 tracking-widest">Disponible en</span>
+                <span className="text-xl font-display font-black block leading-none mt-1">Google Play</span>
+              </div>
+            </a>
+          </div>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-4">
+             <div className="flex items-center gap-3 px-5 py-3 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                <div className="flex flex-col items-start">
+                  <div className="flex items-center gap-1">
+                    {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-amber-400 fill-amber-400" />)}
+                    <span className="text-sm font-black text-gray-900 ml-1">4.9</span>
+                  </div>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">1M+ Descargas</span>
                 </div>
-                <div>
-                    <p className="text-xs font-semibold text-gray-500">DEPÓSITO RECIBIDO</p>
-                    <p className="text-lg font-bold text-gray-800">$5,000.00</p>
+             </div>
+             <div className="flex items-center gap-3 px-5 py-3 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                  <ShieldCheck size={24} />
                 </div>
-            </div>
+                <div className="text-left">
+                  <p className="text-sm font-black text-gray-900 uppercase leading-none">Sin Aval</p>
+                  <p className="text-[10px] font-bold text-emerald-600 mt-1 uppercase">Garantizado</p>
+                </div>
+             </div>
+          </div>
+        </div>
+
+        <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
+          <div className="relative w-full max-w-[650px] aspect-square lg:aspect-[4/5] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] border-8 border-white bg-white group">
+             <HeroImage />
           </div>
         </div>
       </div>

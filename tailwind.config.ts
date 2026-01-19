@@ -10,11 +10,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        display: ['"Plus Jakarta Sans"', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
         headline: ['"Plus Jakarta Sans"', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
+        electric: '#8E94F2',
+        'electric-dark': '#7C83D9',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -67,6 +71,7 @@ export default {
         },
       },
       borderRadius: {
+        '3xl': '1.5rem',
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
@@ -92,11 +97,16 @@ export default {
             '0%': { transform: 'translateX(0%)' },
             '100%': { transform: 'translateX(-100%)' },
         },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'marquee': 'marquee 50s linear infinite',
+        'float': 'float 4s ease-in-out infinite',
       },
     },
   },

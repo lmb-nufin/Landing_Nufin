@@ -1,9 +1,11 @@
 import { Navbar } from "@/components/landing/navbar";
 import { HeroSection } from "@/components/landing/hero-section";
 import { TrustBar } from "@/components/landing/trust-bar";
-import { PartnersSection } from "@/components/landing/partners-section";
 import { MissionSection } from "@/components/landing/mission-section";
 import { Footer } from "@/components/landing/footer";
+import { StepsSection } from "@/components/landing/steps-section";
+import { TestimonialsSection } from "@/components/landing/testimonials-section";
+import { LoanApplicationForm } from "@/components/landing/loan-application-form";
 
 export default function Home() {
   return (
@@ -12,8 +14,10 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <TrustBar />
-        <PartnersSection />
         <MissionSection />
+        <StepsSection />
+        <TestimonialsSection />
+        <LoanApplicationForm />
       </main>
       <Footer />
     </div>

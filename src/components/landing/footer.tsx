@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Logo } from "@/components/landing/logo";
 import { LegalModals } from "@/components/landing/legal-modals";
+import { Headset, Mail, Clock } from "lucide-react";
 
 export function Footer() {
   const [isTermsOpen, setIsTermsOpen] = useState(false);
@@ -10,41 +11,61 @@ export function Footer() {
 
   return (
     <>
-      <footer className="bg-background/80 border-t border-border/50">
-        <div className="container mx-auto px-6 py-8">
-          <div className="flex flex-col items-center justify-between md:flex-row">
-            <Logo />
-            <div className="mt-4 flex space-x-4 md:mt-0">
-              <button
-                onClick={() => setIsTermsOpen(true)}
-                className="text-sm text-foreground/70 hover:text-primary transition-colors"
-              >
-                Términos y Condiciones
-              </button>
-              <button
-                onClick={() => setIsPrivacyOpen(true)}
-                className="text-sm text-foreground/70 hover:text-primary transition-colors"
-              >
-                Aviso de Privacidad
-              </button>
+      <footer className="py-20 border-t border-gray-100 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div className="col-span-1 md:col-span-2 space-y-8">
+              <div className="flex items-center">
+                <Logo className="h-10 md:h-12" />
+              </div>
+              <p className="text-base text-gray-500 leading-relaxed max-w-sm font-medium">
+                La solución financiera inteligente para México. Préstamos rápidos, seguros y sin complicaciones burocráticas.
+              </p>
             </div>
-            <p className="mt-4 text-sm text-foreground/70 md:mt-0">
-              Contacto:{" "}
-              <a
-                href="mailto:soporte@nufin.com.mx"
-                className="hover:text-primary transition-colors"
-              >
-                soporte@nufin.com.mx
-              </a>
-            </p>
+            
+            <div id="servicio" className="space-y-6">
+              <h4 className="font-black text-gray-900 text-sm uppercase tracking-widest flex items-center gap-2">
+                <Headset size={18} className="text-electric" /> Soporte
+              </h4>
+              <div className="flex flex-col gap-4 text-sm font-bold text-gray-500">
+                <div className="flex items-center gap-3">
+                  <Mail size={16} /> <a href="mailto:soporte@nufin.com.mx" className="hover:text-electric transition-colors">soporte@nufin.com.mx</a>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Clock size={16} className="mt-1" /> <span>Lun-Vie: 9:00 - 18:00 CDMX</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+               <h4 className="font-black text-gray-900 text-sm uppercase tracking-widest">Legal</h4>
+               <ul className="space-y-3 text-sm font-bold text-gray-500">
+                 <li>
+                   <button 
+                    onClick={() => setIsTermsOpen(true)} 
+                    className="hover:text-electric transition-colors text-left"
+                   >
+                     Términos y Condiciones
+                   </button>
+                 </li>
+                 <li>
+                   <button 
+                    onClick={() => setIsPrivacyOpen(true)} 
+                    className="hover:text-electric transition-colors text-left"
+                   >
+                     Aviso de Privacidad
+                   </button>
+                 </li>
+               </ul>
+            </div>
           </div>
-          <div className="mt-8 border-t border-border/50 pt-8 text-center text-xs text-foreground/50">
-            <p>
-              Nufin es una marca registrada. Todos los derechos reservados © {new Date().getFullYear()}.
-            </p>
-            <p className="mt-2">
-              Este es un producto financiero operado bajo las regulaciones de la CONDUSEF en México.
-            </p>
+          
+          <div className="pt-10 border-t border-gray-200">
+             <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+               <p className="text-[10px] md:text-xs text-gray-400 uppercase tracking-widest font-black text-center md:text-left">
+                 &copy; 2024 Nufin México. Entidad Financiera bajo supervisión.
+               </p>
+             </div>
           </div>
         </div>
       </footer>

@@ -4,73 +4,57 @@
 
 @layer base {
   :root {
-    --background: 252 100% 99%; /* Light Lavender */
+    --background: 252 100% 99%; /* Surface (#F8F7FF) */
     --foreground: 220 33% 6%;   /* Midnight */
+    
     --card: 0 0% 100%;
     --card-foreground: 220 33% 6%;
+    
     --popover: 0 0% 100%;
     --popover-foreground: 220 33% 6%;
-    --primary: 252 100% 71%;     /* Lavender Blue */
+    
+    --primary: 236 78% 75%; /* Electric Purple (#8E94F2) */
     --primary-foreground: 0 0% 100%;
+    
     --secondary: 240 5.9% 90%;
     --secondary-foreground: 240 5.9% 10%;
+    
     --muted: 240 5.9% 90%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 145 63% 49%;       /* Green for deposit tag */
+    
+    --accent: 199 98% 59%; /* Cyan (#38BDF8) */
     --accent-foreground: 220 33% 6%;
+    
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
+    
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 252 100% 71%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    --ring: 236 78% 75%;
+
     --radius: 1.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
-    --background: 220 33% 6%; /* Midnight */
-    --foreground: 252 100% 99%; /* Light Lavender */
+    --background: 220 33% 6%;
+    --foreground: 252 100% 99%;
     --card: 220 33% 8%;
     --card-foreground: 252 100% 99%;
     --popover: 220 33% 6%;
     --popover-foreground: 252 100% 99%;
-    --primary: 252 100% 71%; /* Lavender Blue */
+    --primary: 236 78% 75%;
     --primary-foreground: 0 0% 100%;
     --secondary: 220 33% 12%;
     --secondary-foreground: 252 100% 99%;
     --muted: 220 33% 12%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 145 63% 49%; /* Green for deposit tag */
+    --accent: 199 98% 59%;
     --accent-foreground: 220 33% 6%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 220 33% 12%;
     --input: 220 33% 12%;
-    --ring: 252 100% 71%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --ring: 236 78% 75%;
   }
 }
 
@@ -80,10 +64,11 @@
   }
   body {
     @apply bg-background text-foreground;
-    background-image: radial-gradient(circle at 1px 1px, hsl(var(--border) / 0.5) 0.5px, transparent 0);
-    background-size: 20px 20px;
   }
   h1,h2,h3,h4,h5,h6 {
-    @apply font-headline;
+    @apply font-display tracking-tighter;
+  }
+  ::selection {
+    @apply bg-electric text-white;
   }
 }

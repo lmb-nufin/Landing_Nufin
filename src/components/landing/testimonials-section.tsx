@@ -2,7 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const testimonials = [
   {
@@ -42,15 +42,9 @@ const testimonials = [
   },
 ];
 
-const Marquee = ({ children, className }: { children: React.ReactNode, className?: string }) => (
-  <div className={cn("flex w-max animate-marquee space-x-8", className)}>
-    {children}
-  </div>
-);
-
 export function TestimonialsSection() {
   return (
-    <section id="nosotros" className="py-20 bg-background overflow-hidden">
+    <section id="clientes" className="py-20 bg-background overflow-hidden">
       <div className="container mx-auto px-6">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
@@ -60,15 +54,25 @@ export function TestimonialsSection() {
             Nuestros clientes son nuestra mejor carta de presentación.
           </p>
         </div>
-      </div>
-      <div className="relative flex flex-col gap-8 overflow-hidden">
-        <div className="flex w-full items-center">
-          <Marquee>
-            {[...testimonials, ...testimonials].map((testimonial, index) => (
-              <TestimonialCard key={`marquee1-${index}`} {...testimonial} />
+        <Carousel
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+          className="w-full max-w-4xl mx-auto"
+        >
+          <CarouselContent>
+            {testimonials.map((testimonial, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                <div className="p-1">
+                  <TestimonialCard {...testimonial} />
+                </div>
+              </CarouselItem>
             ))}
-          </Marquee>
-        </div>
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
@@ -76,9 +80,9 @@ export function TestimonialsSection() {
 
 function TestimonialCard({ quote, name, location, avatar, avatarUrl }: (typeof testimonials)[0]) {
     return (
-        <Card className="w-[350px] shrink-0 rounded-3xl bg-background/50 shadow-lg border-border/50 backdrop-blur-xl">
-            <CardContent className="p-6">
-                <p className="text-foreground/80">"{quote}"</p>
+        <Card className="h-full rounded-3xl bg-background/50 shadow-lg border-border/50 backdrop-blur-xl">
+            <CardContent className="p-6 flex flex-col justify-between h-full">
+                <p className="text-foreground/80 flex-grow">"{quote}"</p>
                 <div className="mt-4 flex items-center gap-3">
                     <Avatar>
                         <AvatarImage src={avatarUrl} alt={name} />

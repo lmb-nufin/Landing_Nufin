@@ -1,31 +1,34 @@
+import { Info } from "lucide-react";
 
 export function MissionSection() {
     return (
-      <section id="nosotros" className="bg-transparent py-20">
-        <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="text-center lg:text-left">
-                    <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">FINANZAS HUMANAS</p>
-                    <h2 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
-                        Nuestra misión es <span className="text-primary">incluirte.</span>
-                    </h2>
-                    <p className="mt-6 max-w-xl mx-auto lg:mx-0 text-lg text-foreground/80">
-                        Nufin nace para dar respuesta a quienes el sistema tradicional ignora. No somos solo una app, somos tu aliado para construir un futuro financiero sólido.
-                    </p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div className="rounded-3xl bg-white p-8 text-center shadow-lg border">
-                        <p className="text-5xl font-extrabold text-primary">100%</p>
-                        <p className="mt-2 text-base font-semibold text-foreground/70">DIGITAL Y SEGURO</p>
-                    </div>
-                    <div className="rounded-3xl bg-primary p-8 text-center shadow-lg">
-                        <p className="text-5xl font-extrabold text-white">24/7</p>
-                        <p className="mt-2 text-base font-semibold text-white/80">DISPONIBILIDAD</p>
-                    </div>
-                </div>
-            </div>
+      <section id="nosotros" className="py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+           <div className="flex flex-col lg:flex-row gap-16 items-center">
+              <div className="lg:w-1/2 space-y-8">
+                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-electric/5 text-electric">
+                    <Info size={16} />
+                    <span className="text-xs font-black uppercase tracking-widest">Finanzas Humanas</span>
+                 </div>
+                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-gray-900 tracking-tighter leading-tight">
+                   Nuestra misión es<br/> <span className="text-electric">incluirte.</span>
+                 </h2>
+                 <p className="text-xl text-gray-500 font-medium leading-relaxed">
+                    Nufin nace para dar respuesta a quienes el sistema tradicional ignora. No somos solo una app, somos tu aliado para construir un futuro financiero sólido.
+                 </p>
+              </div>
+              <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
+                 <div className="p-10 bg-gray-50 rounded-[2.5rem] border border-gray-100 text-center">
+                    <h4 className="text-5xl font-display font-black text-gray-900 mb-2">100%</h4>
+                    <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">Digital y Seguro</p>
+                 </div>
+                 <div className="p-10 bg-electric text-white rounded-[2.5rem] shadow-2xl shadow-electric/20 text-center">
+                    <h4 className="text-5xl font-display font-black mb-2">24/7</h4>
+                    <p className="text-xs font-bold opacity-80 uppercase tracking-widest">Disponibilidad</p>
+                 </div>
+              </div>
+           </div>
         </div>
       </section>
     );
-  }
-  
+}
