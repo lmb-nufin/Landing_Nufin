@@ -47,7 +47,7 @@ export function HeroSection() {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <GooglePlayButton />
+            <GooglePlayButton className="w-44" />
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-4">

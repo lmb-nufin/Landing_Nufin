@@ -35,7 +35,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <GooglePlayButton size="small" />
+          <GooglePlayButton className="w-36" />
         </nav>
 
         <div className="md:hidden">
@@ -59,7 +59,7 @@ export function Navbar() {
                     {link.label}
                   </Link>
                 ))}
-                <GooglePlayButton />
+                <GooglePlayButton className="w-44" />
               </nav>
             </SheetContent>
           </Sheet>
