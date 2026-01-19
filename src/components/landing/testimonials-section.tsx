@@ -1,99 +1,98 @@
 "use client";
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardContent } from "@/components/ui/card";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Star, Quote, CheckCircle2 } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "¡Increíble! Obtuve mi préstamo en minutos. La app es súper fácil de usar y el proceso es muy transparente.",
-    name: "Ana Sofía R.",
+    name: "Alejandra Torres",
     location: "CDMX",
-    avatar: "AS",
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026704d"
+    date: "Miembro desde 2022",
+    quote: "Increíble. No tenía historial crediticio y Nufin fue la única que confió en mí. El depósito llegó en 5 minutos literally.",
+    avatar: "https://i.pravatar.cc/150?u=ale"
   },
   {
-    quote: "Nufin me salvó de un apuro. La aprobación por IA es rapidísima y el dinero llegó a mi cuenta al instante.",
-    name: "Javier M.",
-    location: "Monterrey, N.L.",
-    avatar: "JM",
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026705d"
+    name: "Ricardo Salinas",
+    location: "Monterrey",
+    date: "Miembro desde 2023",
+    quote: "Lo que más valoro es el respeto. No te acosan con llamadas. Pagué a tiempo y mi límite subió de inmediato. ¡Súper recomendado!",
+    avatar: "https://i.pravatar.cc/150?u=rick"
   },
   {
-    quote: "La mejor experiencia que he tenido con una financiera. Sin papeleo, sin filas. Todo desde mi celular.",
-    name: "Valentina G.",
-    location: "Guadalajara, Jal.",
-    avatar: "VG",
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026706d"
+    name: "Elena Gómez",
+    location: "Guadalajara",
+    date: "Miembro desde 2021",
+    quote: "La app es muy intuitiva. Pedí el préstamo para una emergencia médica un domingo a las 11 PM y el SPEI cayó al instante.",
+    avatar: "https://i.pravatar.cc/150?u=elena"
   },
   {
-    quote: "Excelente servicio al cliente. Tenía una duda y me respondieron de inmediato. 100% recomendado.",
-    name: "Carlos E.",
-    location: "Querétaro, Qro.",
-    avatar: "CE",
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026707d"
+    name: "Marco Antonio",
+    location: "Puebla",
+    date: "Miembro desde 2023",
+    quote: "He usado otras apps pero ninguna es tan transparente como Nufin. Sabes exactamente cuánto vas a pagar desde el inicio.",
+    avatar: "https://i.pravatar.cc/150?u=marco"
   },
-   {
-    quote: "Me encanta que no revisen el buró de crédito de forma estricta. Dan oportunidades reales.",
-    name: "Lucía F.",
-    location: "Puebla, Pue.",
-    avatar: "LF",
-    avatarUrl: "https://i.pravatar.cc/150?u=a042581f4e29026708d"
-  },
+  {
+    name: "Sofía Méndez",
+    location: "Querétaro",
+    date: "Miembro desde 2024",
+    quote: "Sin avales ni filas. Todo desde mi celular mientras estaba en el trabajo. Me salvaron de un apuro esta quincena.",
+    avatar: "https://i.pravatar.cc/150?u=sofia"
+  }
 ];
 
 export function TestimonialsSection() {
   return (
-    <section id="clientes" className="py-20 bg-background overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
-            Amado por miles en todo México
+    <section className="py-24 md:py-40 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-16 md:mb-24">
+        <div className="text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/5 border border-electric/10 mb-6">
+            <Star size={14} className="text-amber-500 fill-amber-500" />
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-electric">Social Proof</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-display font-black text-gray-900 tracking-tight mb-6">
+            Historias de <span className="text-electric">éxito</span> real
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/80">
-            Nuestros clientes son nuestra mejor carta de presentación.
+          <p className="text-gray-500 font-medium text-lg max-w-2xl mx-auto">
+            Más de 1 millón de mexicanos han transformado su realidad financiera con el respaldo de Nufin.
           </p>
         </div>
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-4xl mx-auto"
-        >
-          <CarouselContent>
-            {testimonials.map((testimonial, index) => (
-              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                <div className="p-1">
-                  <TestimonialCard {...testimonial} />
+      </div>
+
+      <div className="relative">
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+
+        <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused] w-max">
+          {[...testimonials, ...testimonials].map((t, i) => (
+            <div 
+              key={i} 
+              className="w-[350px] md:w-[450px] bg-white border border-gray-100 rounded-[2.5rem] p-10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(122,90,248,0.12)] transition-all duration-500 flex flex-col"
+            >
+              <div className="flex justify-between items-start mb-8">
+                <div className="relative">
+                   <img src={t.avatar} alt={t.name} className="w-14 h-14 rounded-full border-2 border-white shadow-md grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+                   <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center text-white">
+                      <CheckCircle2 size={12} strokeWidth={3} />
+                   </div>
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+                <Quote className="text-gray-100 w-12 h-12" />
+              </div>
+
+              <p className="text-gray-700 font-medium text-lg leading-relaxed mb-8 flex-grow">
+                "{t.quote}"
+              </p>
+
+              <div className="mt-auto border-t border-gray-50 pt-6">
+                <p className="font-display font-bold text-gray-900">{t.name}</p>
+                <div className="flex justify-between items-center mt-1">
+                   <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t.location}</span>
+                   <span className="text-[10px] font-black text-electric uppercase tracking-widest bg-electric/5 px-2 py-1 rounded-md">{t.date}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-}
-
-function TestimonialCard({ quote, name, location, avatar, avatarUrl }: (typeof testimonials)[0]) {
-    return (
-        <Card className="h-full rounded-3xl bg-background/50 shadow-lg border-border/50 backdrop-blur-xl">
-            <CardContent className="p-6 flex flex-col justify-between h-full">
-                <p className="text-foreground/80 flex-grow">"{quote}"</p>
-                <div className="mt-4 flex items-center gap-3">
-                    <Avatar>
-                        <AvatarImage src={avatarUrl} alt={name} />
-                        <AvatarFallback>{avatar}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                        <p className="font-semibold text-foreground">{name}</p>
-                        <p className="text-sm text-foreground/60">{location}</p>
-                    </div>
-                </div>
-            </CardContent>
-        </Card>
-    )
 }
