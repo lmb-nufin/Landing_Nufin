@@ -3,14 +3,14 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Mountain } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Logo } from "./logo";
 import { GooglePlayIcon } from "@/components/icons/google-play";
 
 const navLinks = [
   { href: "#inicio", label: "Inicio" },
   { href: "#como-funciona", label: "Cómo funciona" },
-  { href: "#aplicar", label: "Servicio al cliente" },
+  { href: "#servicio-cliente", label: "Servicio al cliente" },
   { href: "#nosotros", label: "Sobre nosotros" },
 ];
 
@@ -34,7 +34,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-4 md:flex">
-          <Button className="rounded-3xl" variant="outline">
+          <Button className="rounded-full" variant="outline">
             <GooglePlayIcon className="mr-2 h-4 w-4" />
             Disponible en Google Play
           </Button>
@@ -60,7 +60,7 @@ export function Navbar() {
                     {link.label}
                   </Link>
                 ))}
-                <Button className="rounded-3xl" variant="outline">
+                <Button className="rounded-full" variant="outline">
                     <GooglePlayIcon className="mr-2 h-4 w-4" />
                     Google Play
                 </Button>

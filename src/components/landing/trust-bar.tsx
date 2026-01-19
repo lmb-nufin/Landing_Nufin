@@ -1,50 +1,29 @@
-import { Download, Heart, TrendingUp } from "lucide-react";
+import { Smartphone, Users, TrendingUp } from "lucide-react";
 
 const stats = [
-  { value: "1M+", label: "Descargas", icon: <Download className="h-6 w-6 text-primary" /> },
-  { value: "300k+", label: "Confianza", icon: <Heart className="h-6 w-6 text-pink-500" /> },
-  { value: "$100M+", label: "Impacto", icon: <TrendingUp className="h-6 w-6 text-emerald-500" /> },
+  { value: "1M+", label: "Descargas", icon: <Smartphone className="h-8 w-8 text-blue-500" />, color: "blue" },
+  { value: "300k+", label: "Confianza", icon: <Users className="h-8 w-8 text-green-500" />, color: "green" },
+  { value: "$100M+", label: "Impacto", icon: <TrendingUp className="h-8 w-8 text-purple-500" />, color: "purple" },
 ];
-
-const partners = ["STP", "PROFECO", "Hacienda", "BBVA", "Google", "Amazon"];
 
 export function TrustBar() {
   return (
-    <section className="bg-background py-16">
+    <section className="bg-transparent py-16">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          {/* Stats */}
-          <div className="flex flex-col justify-center space-y-8">
-            <h3 className="text-center text-2xl font-bold tracking-tight lg:text-left">
-              Tu confianza es nuestra prioridad
-            </h3>
-            <div className="grid grid-cols-3 gap-4 text-center">
-              {stats.map((stat) => (
-                <div key={stat.label} className="flex flex-col items-center">
-                  <div className="mb-2 rounded-full bg-primary/10 p-3">{stat.icon}</div>
-                  <p className="text-2xl font-bold">{stat.value}</p>
-                  <p className="text-sm text-foreground/70">{stat.label}</p>
-                </div>
-              ))}
+        <div className="mb-12 text-center">
+          <p className="mb-2 text-sm font-semibold uppercase tracking-wider text-primary">TRANSPARENCIA TOTAL</p>
+          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+            Resultados reales
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {stats.map((stat) => (
+            <div key={stat.label} className="rounded-3xl bg-white p-8 text-center shadow-lg border transition-transform hover:-translate-y-2">
+              <div className={`mb-4 inline-block rounded-2xl p-4 bg-${stat.color}-100`}>{stat.icon}</div>
+              <p className="text-4xl font-extrabold">{stat.value}</p>
+              <p className="mt-2 text-base text-foreground/70">{stat.label}</p>
             </div>
-          </div>
-
-          {/* Partners */}
-          <div className="rounded-3xl bg-background/50 p-8 shadow-inner-lg backdrop-blur-lg border border-border/50">
-            <h3 className="mb-6 text-center text-sm font-semibold uppercase text-foreground/60 tracking-wider">
-              Respaldado por líderes de la industria
-            </h3>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-6 sm:grid-cols-3">
-              {partners.map((partner) => (
-                <div
-                  key={partner}
-                  className="flex items-center justify-center text-lg font-semibold text-foreground/70"
-                >
-                  {partner}
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
