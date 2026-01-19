@@ -5,7 +5,7 @@ export function GooglePlayButton({ className }: { className?: string }) {
     <a
       href="#aplicar"
       className={cn(
-        "inline-block rounded-lg overflow-hidden shadow-lg transition-all duration-300 ease-in-out transform hover:scale-[1.03] hover:shadow-black/20 active:scale-100",
+        "inline-block transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-100",
         className
       )}
     >
