@@ -23,7 +23,7 @@ export function MissionSection() {
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-widest text-center">Digital y Seguro</p>
                  </div>
                  <div className="p-10 bg-gray-900 text-white rounded-[2.5rem] border-8 border-electric flex flex-col items-center justify-center">
-                    <h4 className="text-5xl font-display font-black mb-2 tracking-normal">24/7</h4>
+                    <h4 className="text-5xl font-display font-black mb-2 tracking-normal">24-7</h4>
                     <p className="text-xs font-bold opacity-80 uppercase tracking-widest text-center">Disponibilidad</p>
                  </div>
               </div>
