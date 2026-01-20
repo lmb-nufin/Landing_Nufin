@@ -1,13 +1,14 @@
+
 "use client";
 
 import { useState } from "react";
 import { Logo } from "@/components/landing/logo";
 import { LegalModals } from "@/components/landing/legal-modals";
 import { Headset, Mail, Clock } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   const [isTermsOpen, setIsTermsOpen] = useState(false);
-  const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
 
   return (
     <>
@@ -49,12 +50,12 @@ export function Footer() {
                    </button>
                  </li>
                  <li>
-                   <button 
-                    onClick={() => setIsPrivacyOpen(true)} 
+                   <Link 
+                    href="/aviso-de-privacidad" 
                     className="hover:text-electric transition-colors text-left"
                    >
                      Aviso de Privacidad
-                   </button>
+                   </Link>
                  </li>
                </ul>
             </div>
@@ -72,8 +73,6 @@ export function Footer() {
       <LegalModals
         isTermsOpen={isTermsOpen}
         setIsTermsOpen={setIsTermsOpen}
-        isPrivacyOpen={isPrivacyOpen}
-        setIsPrivacyOpen={setIsPrivacyOpen}
       />
     </>
   );
