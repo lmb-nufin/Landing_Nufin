@@ -12,7 +12,6 @@ const navLinks = [
   { href: "#inicio", label: "Inicio" },
   { href: "#como-funciona", label: "Cómo funciona" },
   { href: "#servicio", label: "Servicio al cliente" },
-  { href: "#nosotros", label: "Sobre nosotros" },
 ];
 
 export function Navbar() {

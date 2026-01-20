@@ -21,7 +21,7 @@ export function Footer() {
               </p>
             </div>
             
-            <div id="servicio" className="space-y-6">
+            <div className="space-y-6">
               <h4 className="font-black text-gray-900 text-sm uppercase tracking-widest flex items-center gap-2">
                 <Headset size={18} className="text-electric" /> Soporte
               </h4>

@@ -5,6 +5,7 @@ import { MissionSection } from "@/components/landing/mission-section";
 import { Footer } from "@/components/landing/footer";
 import { StepsSection } from "@/components/landing/steps-section";
 import { TestimonialsSection } from "@/components/landing/testimonials-section";
+import { CustomerServiceSection } from "@/components/landing/customer-service-section";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <TrustBar />
         <MissionSection />
         <StepsSection />
+        <CustomerServiceSection />
         <TestimonialsSection />
       </main>
       <Footer />
