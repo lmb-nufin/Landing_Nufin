@@ -118,7 +118,7 @@ export function StepsSection() {
                          <p className="text-gray-400 text-lg font-medium">Toma menos de 3 minutos.</p>
                     </div>
                     
-                    <a href="#aplicar" className="group relative inline-block px-10 py-5 bg-white text-gray-900 rounded-2xl font-display font-black text-lg transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] overflow-hidden">
+                    <a href="https://play.google.com/store/apps/details?id=com.nufin.app&hl=en" target="_blank" rel="noopener noreferrer" className="group relative inline-block px-10 py-5 bg-white text-gray-900 rounded-2xl font-display font-black text-lg transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gray-100 to-transparent translate-x-[-100%] group-hover:animate-[shimmer_1.5s_infinite]"></div>
                         <span className="relative flex items-center gap-3">
                             Solicitar ahora <ArrowRight className="w-5 h-5" />
