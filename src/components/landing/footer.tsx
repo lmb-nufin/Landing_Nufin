@@ -1,14 +1,11 @@
 
 "use client";
 
-import { useState } from "react";
 import { Logo } from "@/components/landing/logo";
-import { LegalModals } from "@/components/landing/legal-modals";
 import { Headset, Mail, Clock } from "lucide-react";
 import Link from "next/link";
 
 export function Footer() {
-  const [isTermsOpen, setIsTermsOpen] = useState(false);
 
   return (
     <>
@@ -42,12 +39,12 @@ export function Footer() {
                <h4 className="font-black text-gray-900 text-sm uppercase tracking-widest">Legal</h4>
                <ul className="space-y-3 text-sm font-bold text-gray-500">
                  <li>
-                   <button 
-                    onClick={() => setIsTermsOpen(true)} 
+                   <Link
+                    href="/terminos-y-condiciones"
                     className="hover:text-electric transition-colors text-left"
                    >
                      Términos y Condiciones
-                   </button>
+                   </Link>
                  </li>
                  <li>
                    <Link 
@@ -70,10 +67,8 @@ export function Footer() {
           </div>
         </div>
       </footer>
-      <LegalModals
-        isTermsOpen={isTermsOpen}
-        setIsTermsOpen={setIsTermsOpen}
-      />
     </>
   );
 }
+
+    
