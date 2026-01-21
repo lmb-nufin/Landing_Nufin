@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -42,7 +43,7 @@ export function HeroSection() {
               Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-500 font-medium max-w-xl mx-auto lg:mx-0">
-              De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$9,000 MXN</span> directos a tu cuenta desde tu celular.
+              De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$7,000 MXN</span> directos a tu cuenta desde tu celular.
             </p>
           </div>
           
@@ -54,7 +55,7 @@ export function HeroSection() {
                   <div className="flex flex-col items-start">
                     <div className="flex items-center gap-1">
                       {[...Array(5)].map((_, i) => <Star key={i} size={16} className="text-amber-400 fill-amber-400" />)}
-                      <span className="text-base font-black text-gray-900 ml-1">4.9</span>
+                      <span className="text-base font-black text-gray-900 ml-1">4.6</span>
                     </div>
                     <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">1M+ Descargas</span>
                   </div>
@@ -65,7 +66,6 @@ export function HeroSection() {
                   </div>
                   <div className="text-left">
                     <p className="text-base font-black text-gray-900 uppercase leading-none">Sin Aval</p>
-                    <p className="text-xs font-bold text-emerald-600 mt-1 uppercase">Garantizado</p>
                   </div>
                </div>
             </div>
