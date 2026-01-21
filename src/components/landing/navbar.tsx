@@ -37,7 +37,8 @@ export function Navbar() {
           <GooglePlayButton className="w-36" />
         </nav>
 
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-2">
+          <GooglePlayButton className="w-32" />
           <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
@@ -58,7 +59,6 @@ export function Navbar() {
                     {link.label}
                   </Link>
                 ))}
-                <GooglePlayButton className="w-44" />
               </nav>
             </SheetContent>
           </Sheet>
