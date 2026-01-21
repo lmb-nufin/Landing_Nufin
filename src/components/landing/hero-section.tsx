@@ -36,41 +36,39 @@ export function HeroSection() {
   return (
     <section id="inicio" className="relative pt-32 pb-12 lg:pt-48 lg:pb-32 px-6 bg-[#F8F7FF] overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-center relative z-10">
-        <div className="space-y-8 lg:space-y-12 order-2 lg:order-1 text-center lg:text-left">
-          <div className="space-y-4">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-900 leading-[1.05]">
-                Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
-              </h1>
-              <p className="text-lg md:text-xl text-gray-500 font-medium max-w-xl mx-auto lg:mx-0">
-                De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$9,000 MXN</span> directos a tu cuenta desde tu celular.
-              </p>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <GooglePlayButton className="w-44" />
-            </div>
+        <div className="space-y-8 order-2 lg:order-1 text-center lg:text-left">
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-900 leading-[1.05]">
+              Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-500 font-medium max-w-xl mx-auto lg:mx-0">
+              De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$9,000 MXN</span> directos a tu cuenta desde tu celular.
+            </p>
           </div>
+          
+          <div className="flex flex-col gap-6 items-center lg:items-start">
+            <GooglePlayButton className="w-48" />
 
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-5 pt-4">
-             <div className="flex items-center gap-3 px-5 py-3 bg-white border border-gray-100 rounded-2xl shadow-sm">
-                <div className="flex flex-col items-start">
-                  <div className="flex items-center gap-1">
-                    {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-amber-400 fill-amber-400" />)}
-                    <span className="text-sm font-black text-gray-900 ml-1">4.9</span>
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+               <div className="flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                  <div className="flex flex-col items-start">
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => <Star key={i} size={16} className="text-amber-400 fill-amber-400" />)}
+                      <span className="text-base font-black text-gray-900 ml-1">4.9</span>
+                    </div>
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">1M+ Descargas</span>
                   </div>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">1M+ Descargas</span>
-                </div>
-             </div>
-             <div className="flex items-center gap-3 px-5 py-3 bg-white border border-gray-100 rounded-2xl shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                  <ShieldCheck size={24} />
-                </div>
-                <div className="text-left">
-                  <p className="text-sm font-black text-gray-900 uppercase leading-none">Sin Aval</p>
-                  <p className="text-[10px] font-bold text-emerald-600 mt-1 uppercase">Garantizado</p>
-                </div>
-             </div>
+               </div>
+               <div className="flex items-center gap-4 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                  <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                    <ShieldCheck size={28} />
+                  </div>
+                  <div className="text-left">
+                    <p className="text-base font-black text-gray-900 uppercase leading-none">Sin Aval</p>
+                    <p className="text-xs font-bold text-emerald-600 mt-1 uppercase">Garantizado</p>
+                  </div>
+               </div>
+            </div>
           </div>
         </div>
 
