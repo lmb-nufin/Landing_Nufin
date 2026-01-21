@@ -37,7 +37,7 @@ export function HeroSection() {
   return (
     <section id="inicio" className="relative pt-32 pb-12 lg:pt-48 lg:pb-32 px-6 bg-[#F8F7FF] overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-16 items-center relative z-10">
-        <div className="space-y-8 order-2 lg:order-1 text-center lg:text-left">
+        <div className="order-2 lg:order-1 text-center lg:text-left">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-900 leading-[1.05]">
               Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
@@ -47,7 +47,7 @@ export function HeroSection() {
             </p>
           </div>
           
-          <div className="flex flex-col gap-6 items-center lg:items-start">
+          <div className="mt-8 flex flex-col gap-6 items-center lg:items-start">
             <GooglePlayButton className="w-48" />
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
@@ -81,3 +81,4 @@ export function HeroSection() {
     </section>
   );
 }
+
