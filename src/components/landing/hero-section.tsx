@@ -12,9 +12,9 @@ export function HeroSection() {
   return (
     <section id="inicio" className="relative pt-10 pb-8 lg:pt-16 lg:pb-12 px-6 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto bg-[#F8F7FF] rounded-3xl p-8 lg:p-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32">
           
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left flex flex-col justify-center">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl font-display font-black text-gray-900 leading-[1.1]">
                 Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
@@ -28,7 +28,8 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="relative w-full flex justify-center lg:justify-end">
+          <div className="relative w-full flex flex-col items-center lg:items-end">
+            <div className="h-40 hidden lg:block" />
             <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
               <Image 
                 src={heroImage?.imageUrl || "/images/hero-placeholder.svg"} 
