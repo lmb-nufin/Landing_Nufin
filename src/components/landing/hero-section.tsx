@@ -36,9 +36,9 @@ const HeroImage: React.FC = () => {
 export function HeroSection() {
   return (
     <section id="inicio" className="relative pt-10 pb-8 lg:pt-16 lg:pb-12 px-6 bg-[#F8F7FF] overflow-hidden">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-24 items-center relative z-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-24 relative z-10">
         
-        <div className="order-2 lg:order-1 text-center lg:text-left">
+        <div className="order-2 lg:order-1 text-center lg:text-left lg:self-center">
           <div className="space-y-3">
             <h1 className="text-3xl md:text-5xl font-display font-black text-gray-900 leading-[1.05]">
               Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
@@ -48,7 +48,7 @@ export function HeroSection() {
             </p>
           </div>
           
-          <div className="mt-3 flex flex-col gap-2 items-center lg:items-start">
+          <div className="mt-3 flex flex-col gap-1 items-center lg:items-start">
             <GooglePlayButton className="w-36 md:w-40 mt-1" />
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mt-1">
@@ -73,7 +73,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
+        <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end lg:mt-24">
           <div className="relative w-full max-w-sm md:max-w-xl aspect-square lg:aspect-square rounded-3xl md:rounded-[2.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] border-4 md:border-8 border-white bg-white group">
              <HeroImage />
           </div>
