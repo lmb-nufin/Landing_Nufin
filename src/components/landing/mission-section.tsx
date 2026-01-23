@@ -2,8 +2,8 @@ import { Sparkles, FileText, PhoneOff, Heart, ArrowUpRight } from 'lucide-react'
 
 export function MissionSection() {
   return (
-    <section id="nosotros" className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="nosotros" className="py-8 px-6">
+      <div className="max-w-6xl mx-auto bg-[#F8F7FF] rounded-3xl p-8 lg:p-12">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-10">
           <div className="max-w-2xl">

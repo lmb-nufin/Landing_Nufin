@@ -16,8 +16,8 @@ const FacebookIcon = ({ className }: { className?: string }) => (
 
 export function CustomerServiceSection() {
   return (
-    <section id="servicio" className="py-16 bg-white border-t border-gray-50">
-      <div className="max-w-4xl mx-auto px-6 text-center">
+    <section id="servicio" className="py-8 px-6">
+      <div className="max-w-4xl mx-auto bg-[#F8F7FF] rounded-3xl p-8 lg:p-12 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/5 border border-electric/10 mb-6">
             <Headset size={14} className="text-electric" />
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-electric">Soporte Real</span>
@@ -29,17 +29,17 @@ export function CustomerServiceSection() {
           Estamos aquí para ti. Contáctanos a través de nuestros canales oficiales y un humano te atenderá.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="https://wa.me/525573796433" target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
+            <a href="https://wa.me/525573796433" target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
                 <WhatsAppIcon className="w-8 h-8 text-green-500 mb-4 transition-transform group-hover:scale-110" />
                 <h3 className="font-display font-bold text-base text-gray-900 mb-1">WhatsApp</h3>
                 <p className="text-xs text-gray-500 font-medium group-hover:text-electric transition-colors">+52 55 7379 6433</p>
             </a>
-             <a href="mailto:soporte@nufin.com.mx" className="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
+             <a href="mailto:soporte@nufin.com.mx" className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
                 <Mail className="w-8 h-8 text-gray-400 mb-4 transition-transform group-hover:scale-110" />
                 <h3 className="font-display font-bold text-base text-gray-900 mb-1">Correo</h3>
                 <p className="text-xs text-gray-500 font-medium group-hover:text-electric transition-colors">soporte@nufin.com.mx</p>
             </a>
-            <a href="https://tinyurl.com/2etvfeex" target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
+            <a href="https://tinyurl.com/2etvfeex" target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
                 <FacebookIcon className="w-8 h-8 text-blue-600 mb-4 transition-transform group-hover:scale-110" />
                 <h3 className="font-display font-bold text-base text-gray-900 mb-1">Facebook</h3>
                 <p className="text-xs text-gray-500 font-medium group-hover:text-electric transition-colors">@nufinoficial</p>

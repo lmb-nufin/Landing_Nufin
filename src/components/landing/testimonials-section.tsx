@@ -42,9 +42,9 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-16 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-12">
-        <div className="text-center">
+    <section className="py-8 overflow-hidden">
+      <div className="px-6">
+        <div className="max-w-7xl mx-auto text-center bg-[#F8F7FF] rounded-3xl p-8 lg:p-12 mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/5 border border-electric/10 mb-6">
             <Star size={14} className="text-amber-500 fill-amber-500" />
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-electric">Social Proof</span>
