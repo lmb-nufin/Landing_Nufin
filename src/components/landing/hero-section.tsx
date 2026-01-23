@@ -29,7 +29,7 @@ export function HeroSection() {
           </div>
 
           <div className="relative w-full flex flex-col items-center lg:items-end">
-            <div className="h-20 hidden lg:block" />
+            <div className="h-10 hidden lg:block" />
             <div className="relative w-full max-w-md aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
               <Image 
                 src={heroImage?.imageUrl || "/images/hero-placeholder.svg"} 
