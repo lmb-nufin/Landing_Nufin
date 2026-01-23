@@ -36,7 +36,7 @@ const HeroImage: React.FC = () => {
 export function HeroSection() {
   return (
     <section id="inicio" className="relative pt-10 pb-8 lg:pt-16 lg:pb-12 px-6 bg-[#F8F7FF] overflow-hidden">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 items-center relative z-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 lg:gap-24 items-center relative z-10">
         
         <div className="order-2 lg:order-1 text-center lg:text-left">
           <div className="space-y-3">
@@ -49,7 +49,7 @@ export function HeroSection() {
           </div>
           
           <div className="mt-3 flex flex-col gap-2 items-center lg:items-start">
-            <GooglePlayButton className="w-36 md:w-40" />
+            <GooglePlayButton className="w-36 md:w-40 mt-1" />
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mt-1">
                <div className="flex items-center gap-3 px-3 py-1.5 bg-white border border-gray-100 rounded-lg shadow-sm">
