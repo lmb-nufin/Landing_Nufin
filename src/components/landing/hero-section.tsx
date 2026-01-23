@@ -35,12 +35,12 @@ const HeroImage: React.FC = () => {
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="relative pt-20 pb-8 lg:pt-24 lg:pb-12 px-6 bg-[#F8F7FF] overflow-hidden">
+    <section id="inicio" className="relative pt-10 pb-8 lg:pt-16 lg:pb-12 px-6 bg-[#F8F7FF] overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 items-center relative z-10">
         
         <div className="order-2 lg:order-1 text-center lg:text-left">
           <div className="space-y-3">
-            <h1 className="text-4xl md:text-5xl font-display font-black text-gray-900 leading-[1.05]">
+            <h1 className="text-3xl md:text-5xl font-display font-black text-gray-900 leading-[1.05]">
               Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
             </h1>
             <p className="text-base text-gray-500 font-medium max-w-xl mx-auto lg:mx-0">
@@ -48,25 +48,25 @@ export function HeroSection() {
             </p>
           </div>
           
-          <div className="mt-4 flex flex-col gap-3 items-center lg:items-start">
+          <div className="mt-3 flex flex-col gap-2 items-center lg:items-start">
             <GooglePlayButton className="w-36 md:w-40" />
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mt-1">
-               <div className="flex items-center gap-3 px-4 py-2 bg-white border border-gray-100 rounded-lg shadow-sm">
+               <div className="flex items-center gap-3 px-3 py-1.5 bg-white border border-gray-100 rounded-lg shadow-sm">
                   <div className="flex flex-col items-start">
                     <div className="flex items-center gap-1">
-                      {[...Array(5)].map((_, i) => <Star key={i} size={12} className="text-amber-400 fill-amber-400" />)}
+                      {[...Array(5)].map((_, i) => <Star key={i} size={11} className="text-amber-400 fill-amber-400" />)}
                       <span className="text-xs font-black text-gray-900 ml-1">4.6</span>
                     </div>
-                    <span className="text-[9px] font-bold text-gray-400 uppercase tracking-widest mt-1">1M+ Descargas</span>
+                    <span className="text-[8px] font-bold text-gray-400 uppercase tracking-widest mt-1">1M+ Descargas</span>
                   </div>
                </div>
-               <div className="flex items-center gap-2 px-4 py-2 bg-white border border-gray-100 rounded-lg shadow-sm">
-                  <div className="w-8 h-8 rounded-md bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                    <ShieldCheck size={18} />
+               <div className="flex items-center gap-2 px-3 py-1.5 bg-white border border-gray-100 rounded-lg shadow-sm">
+                  <div className="w-7 h-7 rounded-md bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                    <ShieldCheck size={16} />
                   </div>
                   <div className="text-left">
-                    <p className="text-xs font-black text-gray-900 uppercase leading-none">Sin Aval</p>
+                    <p className="text-[11px] font-black text-gray-900 uppercase leading-none">Sin Aval</p>
                   </div>
                </div>
             </div>
@@ -74,7 +74,7 @@ export function HeroSection() {
         </div>
 
         <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[440px] aspect-square lg:aspect-square rounded-3xl md:rounded-[2.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] border-4 md:border-8 border-white bg-white group">
+          <div className="relative w-full max-w-sm md:max-w-xl aspect-square lg:aspect-square rounded-3xl md:rounded-[2.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] border-4 md:border-8 border-white bg-white group">
              <HeroImage />
           </div>
         </div>
