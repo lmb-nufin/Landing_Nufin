@@ -42,48 +42,48 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-16 md:py-20 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-12 md:mb-16">
+    <section className="py-16 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-12">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/5 border border-electric/10 mb-6">
             <Star size={14} className="text-amber-500 fill-amber-500" />
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-electric">Social Proof</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-black text-gray-900 tracking-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900 tracking-tight mb-4">
             Historias de <span className="text-electric">éxito</span> real
           </h2>
-          <p className="text-gray-500 font-medium text-base max-w-2xl mx-auto">
+          <p className="text-gray-500 font-medium text-sm max-w-2xl mx-auto">
             Más de 1 millón de mexicanos han transformado su realidad financiera con el respaldo de Nufin.
           </p>
         </div>
       </div>
 
       <div className="relative">
-        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 left-0 w-16 md:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        <div className="absolute inset-y-0 right-0 w-16 md:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
         <div className="flex gap-6 animate-marquee hover:[animation-play-state:paused] w-max">
           {[...testimonials, ...testimonials].map((t, i) => (
             <div 
               key={i} 
-              className="w-[350px] md:w-[420px] bg-white border border-gray-100 rounded-3xl p-8 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(122,90,248,0.12)] transition-all duration-500 flex flex-col"
+              className="w-[320px] md:w-[380px] bg-white border border-gray-100 rounded-3xl p-6 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(122,90,248,0.12)] transition-all duration-500 flex flex-col"
             >
-              <div className="flex justify-between items-start mb-6">
+              <div className="flex justify-between items-start mb-4">
                 <div className="relative">
-                   <img src={t.avatar} alt={t.name} className="w-14 h-14 rounded-full border-2 border-white shadow-md grayscale-[0.5] group-hover:grayscale-0 transition-all" />
+                   <img src={t.avatar} alt={t.name} className="w-12 h-12 rounded-full border-2 border-white shadow-md grayscale-[0.5] group-hover:grayscale-0 transition-all" />
                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center text-white">
                       <CheckCircle2 size={12} strokeWidth={3} />
                    </div>
                 </div>
-                <Quote className="text-gray-100 w-12 h-12" />
+                <Quote className="text-gray-100 w-10 h-10" />
               </div>
 
-              <p className="text-gray-700 font-medium text-base leading-relaxed mb-8 flex-grow">
+              <p className="text-gray-700 font-medium text-sm leading-relaxed mb-6 flex-grow">
                 "{t.quote}"
               </p>
 
-              <div className="mt-auto border-t border-gray-50 pt-6">
-                <p className="font-display font-bold text-gray-900">{t.name}</p>
+              <div className="mt-auto border-t border-gray-50 pt-5">
+                <p className="font-display font-bold text-gray-900 text-base">{t.name}</p>
                 <div className="flex justify-between items-center mt-1">
                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">{t.location}</span>
                    <span className="text-[10px] font-black text-electric uppercase tracking-widest bg-electric/5 px-2 py-1 rounded-md">{t.date}</span>

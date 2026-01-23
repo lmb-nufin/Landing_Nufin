@@ -10,7 +10,7 @@ export function MissionSection() {
                     <Info size={16} />
                     <span className="text-xs font-black uppercase tracking-widest">Finanzas Humanas</span>
                  </div>
-                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-black text-gray-900 tracking-tighter leading-tight">
+                 <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900 tracking-tighter leading-tight">
                    Nuestra misión es<br/> <span className="text-electric">incluirte.</span>
                  </h2>
                  <p className="text-base text-gray-500 font-medium leading-relaxed">
@@ -19,12 +19,12 @@ export function MissionSection() {
               </div>
               <div className="lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full">
                  <div className="p-8 bg-gray-50 rounded-3xl border border-gray-100 flex flex-col items-center justify-center">
-                    <h4 className="text-4xl font-display font-black text-gray-900 mb-2">100%</h4>
-                    <p className="text-xs font-bold text-gray-400 uppercase tracking-widest text-center">Digital y Seguro</p>
+                    <h4 className="text-3xl font-display font-black text-gray-900 mb-2">100%</h4>
+                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-center">Digital y Seguro</p>
                  </div>
                  <div className="p-8 bg-gray-900 text-white rounded-3xl border-8 border-electric flex flex-col items-center justify-center">
-                    <h4 className="text-4xl font-display font-black mb-2 tracking-normal">24-7</h4>
-                    <p className="text-xs font-bold opacity-80 uppercase tracking-widest text-center">Disponibilidad</p>
+                    <h4 className="text-3xl font-display font-black mb-2 tracking-normal">24-7</h4>
+                    <p className="text-[10px] font-bold opacity-80 uppercase tracking-widest text-center">Disponibilidad</p>
                  </div>
               </div>
            </div>
