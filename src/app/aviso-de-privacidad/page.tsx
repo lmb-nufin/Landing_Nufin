@@ -9,10 +9,10 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
-      <main className="flex-1 pt-24 md:pt-32 pb-16">
+      <main className="flex-1 pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-4 mb-12">
-            <h1 className="text-4xl md:text-5xl font-display font-black text-gray-900">
+            <h1 className="text-3xl md:text-4xl font-display font-black text-gray-900">
               Aviso de Privacidad
             </h1>
             <p className="text-gray-500 font-medium">
@@ -20,7 +20,7 @@ export default function PrivacyPolicyPage() {
             </p>
           </div>
 
-          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
+          <div className="prose max-w-none text-gray-700 space-y-6">
             <p>
               En virtud de lo dispuesto por la Ley Federal de Protección de Datos Personales en Posesión de Particulares (“LFPDPPP”), su Reglamento, los Lineamientos del Aviso de Privacidad y las demás Disposiciones aplicables (en adelante denominados conjuntamente como la “Ley”), se emite el presente Aviso de Privacidad en los siguientes términos:
             </p>

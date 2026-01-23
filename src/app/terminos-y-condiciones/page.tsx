@@ -7,10 +7,10 @@ export default function TermsAndConditionsPage() {
   return (
     <div className="flex min-h-screen flex-col bg-white">
       <Navbar />
-      <main className="flex-1 pt-24 md:pt-32 pb-16">
+      <main className="flex-1 pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-6">
           <div className="space-y-4 mb-12">
-            <h1 className="text-4xl md:text-5xl font-display font-black text-gray-900">
+            <h1 className="text-3xl md:text-4xl font-display font-black text-gray-900">
               Términos y Condiciones
             </h1>
             <p className="text-gray-500 font-medium">
@@ -18,7 +18,7 @@ export default function TermsAndConditionsPage() {
             </p>
           </div>
 
-          <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
+          <div className="prose max-w-none text-gray-700 space-y-6">
             <p>
               La utilización del portal www.nufin.mx (en lo sucesivo la “Página Web”) y de la aplicación para dispositivos móviles Android denominada “NUFIN” (en lo sucesivo la “App”), expresa la adhesión plena y sin reservas por parte del usuario a los presentes Términos y Condiciones (en lo sucesivo T&C) y al Aviso de Privacidad de Nufin México SAPI de CV (en lo sucesivo “NUFIN”), documentos que se encuentran a disposición de los usuarios en todo momento a través de dichos medios y físicamente en el domicilio de NUFIN ubicado en General Mariano Escobedo No. 550, Piso 4 ala “B”, Col. Anzures, Alcaldía Miguel Hidalgo CP. 11590, Ciudad de México. Para efectos del presente documento, se entenderá por usuario a toda persona que acceda, navegue, descargue y/o se registre en la Página Web y/o la Aplicación para la obtención de los servicios financieros de NUFIN.Los productos y servicios financieros de NUFIN están dirigidos única y exclusivamente a personas físicas mexicanas con capacidad legal para contratar por lo que están expresamente excluidos los menores de edad, personas declaradas en estado de interdicción, los mayores de edad que no tengan capacidad legar para contratar; y aquellos que padezcan alguna afección originada por enfermedad o deficiencia persistente de carácter físico, psicológico o sensorial o por la adicción a sustancias tóxicas como el alcohol, los psicotrópicos o los estupefacientes; siempre que debido a la limitación, o a la alteración en la inteligencia que esto les provoque no puedan gobernarse y obligarse por sí mismos, o manifestar su voluntad por algún medio, aquellos limitados por otro contrato, convenio o relación comercial, enunciativa más no limitativamente, así como los usuarios que hayan sido vetados definitiva o temporalmente por NUFIN en relación a su comportamiento crediticio.En consecuencia, al acceder a la Página Web y/o al utilizar la Aplicación de NUFIN, el usuario manifiesta y garantiza que es mayor de edad y con capacidad legal para contratar de acuerdo con la legislación de la República Mexicana. Los Servicios ofrecidos por NUFIN a través de la Página Web y/o la Aplicación serán válidos única y exclusivamente en el territorio de la República Mexicana, por lo que en caso de que la Página Web y/o la Aplicación pudieran ser accedidos desde diversos países alrededor del mundo, esto en ningún caso implicará que NUFIN autorice o habilite sus servicios y/o contenidos en tales países o en diversas jurisdicciones.
             </p>

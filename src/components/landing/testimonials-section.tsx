@@ -42,17 +42,17 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 md:py-40 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 mb-16 md:mb-24">
+    <section className="py-16 md:py-20 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 mb-12 md:mb-16">
         <div className="text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/5 border border-electric/10 mb-6">
             <Star size={14} className="text-amber-500 fill-amber-500" />
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-electric">Social Proof</span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-display font-black text-gray-900 tracking-tight mb-6">
+          <h2 className="text-3xl md:text-5xl font-display font-black text-gray-900 tracking-tight mb-6">
             Historias de <span className="text-electric">éxito</span> real
           </h2>
-          <p className="text-gray-500 font-medium text-lg max-w-2xl mx-auto">
+          <p className="text-gray-500 font-medium text-base max-w-2xl mx-auto">
             Más de 1 millón de mexicanos han transformado su realidad financiera con el respaldo de Nufin.
           </p>
         </div>
@@ -66,9 +66,9 @@ export function TestimonialsSection() {
           {[...testimonials, ...testimonials].map((t, i) => (
             <div 
               key={i} 
-              className="w-[350px] md:w-[450px] bg-white border border-gray-100 rounded-[2.5rem] p-10 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(122,90,248,0.12)] transition-all duration-500 flex flex-col"
+              className="w-[350px] md:w-[420px] bg-white border border-gray-100 rounded-3xl p-8 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] hover:shadow-[0_40px_80px_-20px_rgba(122,90,248,0.12)] transition-all duration-500 flex flex-col"
             >
-              <div className="flex justify-between items-start mb-8">
+              <div className="flex justify-between items-start mb-6">
                 <div className="relative">
                    <img src={t.avatar} alt={t.name} className="w-14 h-14 rounded-full border-2 border-white shadow-md grayscale-[0.5] group-hover:grayscale-0 transition-all" />
                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center text-white">
@@ -78,7 +78,7 @@ export function TestimonialsSection() {
                 <Quote className="text-gray-100 w-12 h-12" />
               </div>
 
-              <p className="text-gray-700 font-medium text-lg leading-relaxed mb-8 flex-grow">
+              <p className="text-gray-700 font-medium text-base leading-relaxed mb-8 flex-grow">
                 "{t.quote}"
               </p>
 

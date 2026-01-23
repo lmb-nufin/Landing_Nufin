@@ -41,7 +41,7 @@ export function StepsSection() {
   ];
 
   return (
-    <section id="como-funciona" className="py-24 md:py-32 bg-[#F8FAFC] relative overflow-hidden">
+    <section id="como-funciona" className="py-16 md:py-20 bg-[#F8FAFC] relative overflow-hidden">
         {/* Background Decorative Elements */}
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-electric/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
@@ -49,18 +49,18 @@ export function StepsSection() {
         </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
             <div className="max-w-2xl">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-gray-200 shadow-sm mb-6">
                     <span className="w-2 h-2 rounded-full bg-electric animate-pulse"></span>
                     <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">Proceso Digital 100%</span>
                 </div>
-                <h3 className="text-4xl md:text-6xl font-display font-black text-gray-900 tracking-tighter leading-[1.1]">
+                <h3 className="text-3xl md:text-5xl font-display font-black text-gray-900 tracking-tighter leading-[1.1]">
                     Dinero en tu cuenta <br/>
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric to-violet-600">a la velocidad de la luz</span>
                 </h3>
             </div>
-            <p className="text-gray-500 font-medium text-lg max-w-xs md:text-right pb-2">
+            <p className="text-gray-500 font-medium text-base max-w-xs md:text-right pb-2">
                 Sin filas, sin sucursales y sin letras chiquitas. Así debe ser la banca moderna.
             </p>
         </div>
@@ -77,7 +77,7 @@ export function StepsSection() {
                         {step.time}
                     </div>
 
-                    <div className="bg-white rounded-[2rem] p-6 border border-gray-100 shadow-lg shadow-gray-200/50 hover:shadow-xl transition-all duration-300 h-full flex flex-col items-start relative overflow-hidden group-hover:-translate-y-2">
+                    <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg shadow-gray-200/50 hover:shadow-xl transition-all duration-300 h-full flex flex-col items-start relative overflow-hidden group-hover:-translate-y-2">
                         {/* Hover Gradient Overlay */}
                         <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
                         
@@ -97,8 +97,8 @@ export function StepsSection() {
         </div>
 
         {/* Premium CTA & Stats */}
-        <div id="aplicar" className="mt-20 relative">
-            <div className="bg-gray-900 rounded-[3rem] p-8 md:p-12 overflow-hidden relative shadow-2xl shadow-gray-900/30">
+        <div id="aplicar" className="mt-16 relative">
+            <div className="bg-gray-900 rounded-3xl p-8 overflow-hidden relative shadow-2xl shadow-gray-900/30">
                 {/* Background Gradients */}
                 <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-electric/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-emerald-500/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/3 pointer-events-none"></div>
@@ -112,10 +112,10 @@ export function StepsSection() {
                             </span>
                             <span className="text-emerald-400 font-bold text-xs tracking-widest uppercase">Sistema Activo</span>
                          </div>
-                         <h4 className="text-3xl md:text-5xl font-display font-black text-white tracking-tight">
+                         <h4 className="text-3xl md:text-4xl font-display font-black text-white tracking-tight">
                             Comienza tu solicitud
                          </h4>
-                         <p className="text-gray-400 text-lg font-medium">Toma menos de 3 minutos.</p>
+                         <p className="text-gray-400 text-base font-medium">Toma menos de 3 minutos.</p>
                     </div>
                     
                     <a href="https://play.google.com/store/apps/details?id=com.nufin.app&hl=en" target="_blank" rel="noopener noreferrer" className="group relative inline-block px-10 py-5 bg-white text-gray-900 rounded-2xl font-display font-black text-lg transition-all hover:scale-105 shadow-[0_0_40px_-10px_rgba(255,255,255,0.3)] overflow-hidden">
@@ -127,7 +127,7 @@ export function StepsSection() {
                 </div>
 
                 {/* Stats Grid inside Dark Card for Contrast */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 border-t border-gray-800 pt-10">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 border-t border-gray-800 pt-8">
                     {[
                         { label: "Reconstruyen su historial", val: "8 de cada 10", icon: <UserCheck size={16} className="text-electric" /> },
                         { label: "Cifrado Militar", val: "AES-256", icon: <ShieldCheck size={16} className="text-emerald-400" /> },

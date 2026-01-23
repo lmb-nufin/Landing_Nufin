@@ -35,38 +35,38 @@ const HeroImage: React.FC = () => {
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="relative pt-24 pb-12 lg:pt-32 lg:pb-32 px-6 bg-[#F8F7FF] overflow-hidden">
+    <section id="inicio" className="relative pt-20 pb-10 lg:pt-24 lg:pb-16 px-6 bg-[#F8F7FF] overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8 items-center relative z-10">
         
         <div className="order-2 lg:order-1 text-center lg:text-left">
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-gray-900 leading-[1.05]">
+          <div className="space-y-3">
+            <h1 className="text-4xl md:text-5xl font-display font-black text-gray-900 leading-[1.05]">
               Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-500 font-medium max-w-xl mx-auto lg:mx-0">
+            <p className="text-base md:text-lg text-gray-500 font-medium max-w-xl mx-auto lg:mx-0">
               De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$7,000 MXN</span> directos a tu cuenta desde tu celular.
             </p>
           </div>
           
-          <div className="mt-4 lg:mt-8 flex flex-col gap-4 items-center lg:items-start">
-            <GooglePlayButton className="w-48" />
+          <div className="mt-6 flex flex-col gap-4 items-center lg:items-start">
+            <GooglePlayButton className="w-40" />
 
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-2">
-               <div className="flex items-center gap-3 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 mt-2">
+               <div className="flex items-center gap-3 px-5 py-3 bg-white border border-gray-100 rounded-xl shadow-sm">
                   <div className="flex flex-col items-start">
                     <div className="flex items-center gap-1">
-                      {[...Array(5)].map((_, i) => <Star key={i} size={16} className="text-amber-400 fill-amber-400" />)}
-                      <span className="text-base font-black text-gray-900 ml-1">4.6</span>
+                      {[...Array(5)].map((_, i) => <Star key={i} size={14} className="text-amber-400 fill-amber-400" />)}
+                      <span className="text-sm font-black text-gray-900 ml-1">4.6</span>
                     </div>
-                    <span className="text-xs font-bold text-gray-400 uppercase tracking-widest mt-1">1M+ Descargas</span>
+                    <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">1M+ Descargas</span>
                   </div>
                </div>
-               <div className="flex items-center gap-4 px-6 py-4 bg-white border border-gray-100 rounded-2xl shadow-sm">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
-                    <ShieldCheck size={28} />
+               <div className="flex items-center gap-3 px-5 py-3 bg-white border border-gray-100 rounded-xl shadow-sm">
+                  <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                    <ShieldCheck size={24} />
                   </div>
                   <div className="text-left">
-                    <p className="text-base font-black text-gray-900 uppercase leading-none">Sin Aval</p>
+                    <p className="text-sm font-black text-gray-900 uppercase leading-none">Sin Aval</p>
                   </div>
                </div>
             </div>
@@ -74,7 +74,7 @@ export function HeroSection() {
         </div>
 
         <div className="relative order-1 lg:order-2 flex justify-center lg:justify-end">
-          <div className="relative w-full max-w-[500px] aspect-[4/3.5] md:aspect-square lg:aspect-[4/5] rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] border-8 border-white bg-white group">
+          <div className="relative w-full max-w-[460px] aspect-square lg:aspect-[4/4.5] rounded-3xl md:rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(0,0,0,0.1)] border-8 border-white bg-white group">
              <HeroImage />
           </div>
         </div>

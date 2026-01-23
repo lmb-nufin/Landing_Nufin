@@ -16,33 +16,33 @@ const FacebookIcon = ({ className }: { className?: string }) => (
 
 export function CustomerServiceSection() {
   return (
-    <section id="servicio" className="py-24 bg-white border-t border-gray-50">
+    <section id="servicio" className="py-16 bg-white border-t border-gray-50">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-electric/5 border border-electric/10 mb-6">
             <Headset size={14} className="text-electric" />
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-electric">Soporte Real</span>
         </div>
-        <h2 className="text-4xl md:text-5xl font-display font-black text-gray-900 tracking-tighter leading-tight mb-6">
+        <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900 tracking-tighter leading-tight mb-6">
           ¿Necesitas Ayuda?
         </h2>
-        <p className="text-lg text-gray-500 font-medium max-w-2xl mx-auto mb-12">
+        <p className="text-base text-gray-500 font-medium max-w-2xl mx-auto mb-12">
           Estamos aquí para ti. Contáctanos a través de nuestros canales oficiales y un humano te atenderá.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="https://wa.me/525573796433" target="_blank" rel="noopener noreferrer" className="p-8 rounded-[2rem] bg-gray-50 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
-                <WhatsAppIcon className="w-12 h-12 text-green-500 mb-4 transition-transform group-hover:scale-110" />
-                <h3 className="font-display font-bold text-xl text-gray-900 mb-1">WhatsApp</h3>
-                <p className="text-gray-500 font-medium group-hover:text-electric transition-colors">+52 55 7379 6433</p>
+            <a href="https://wa.me/525573796433" target="_blank" rel="noopener noreferrer" className="p-6 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
+                <WhatsAppIcon className="w-10 h-10 text-green-500 mb-4 transition-transform group-hover:scale-110" />
+                <h3 className="font-display font-bold text-lg text-gray-900 mb-1">WhatsApp</h3>
+                <p className="text-sm text-gray-500 font-medium group-hover:text-electric transition-colors">+52 55 7379 6433</p>
             </a>
-             <a href="mailto:soporte@nufin.com.mx" className="p-8 rounded-[2rem] bg-gray-50 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
-                <Mail className="w-12 h-12 text-gray-400 mb-4 transition-transform group-hover:scale-110" />
-                <h3 className="font-display font-bold text-xl text-gray-900 mb-1">Correo</h3>
-                <p className="text-gray-500 font-medium group-hover:text-electric transition-colors">soporte@nufin.com.mx</p>
+             <a href="mailto:soporte@nufin.com.mx" className="p-6 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
+                <Mail className="w-10 h-10 text-gray-400 mb-4 transition-transform group-hover:scale-110" />
+                <h3 className="font-display font-bold text-lg text-gray-900 mb-1">Correo</h3>
+                <p className="text-sm text-gray-500 font-medium group-hover:text-electric transition-colors">soporte@nufin.com.mx</p>
             </a>
-            <a href="https://tinyurl.com/2etvfeex" target="_blank" rel="noopener noreferrer" className="p-8 rounded-[2rem] bg-gray-50 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
-                <FacebookIcon className="w-12 h-12 text-blue-600 mb-4 transition-transform group-hover:scale-110" />
-                <h3 className="font-display font-bold text-xl text-gray-900 mb-1">Facebook</h3>
-                <p className="text-gray-500 font-medium group-hover:text-electric transition-colors">@nufinoficial</p>
+            <a href="https://tinyurl.com/2etvfeex" target="_blank" rel="noopener noreferrer" className="p-6 rounded-3xl bg-gray-50 border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 flex flex-col items-center justify-center text-center group">
+                <FacebookIcon className="w-10 h-10 text-blue-600 mb-4 transition-transform group-hover:scale-110" />
+                <h3 className="font-display font-bold text-lg text-gray-900 mb-1">Facebook</h3>
+                <p className="text-sm text-gray-500 font-medium group-hover:text-electric transition-colors">@nufinoficial</p>
             </a>
         </div>
       </div>
