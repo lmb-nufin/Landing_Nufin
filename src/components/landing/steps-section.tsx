@@ -44,8 +44,8 @@ export function StepsSection() {
     <section id="como-funciona" className="relative overflow-hidden py-8 px-6">
       <div className="max-w-7xl mx-auto bg-[#F8F7FF] rounded-3xl p-8 lg:p-12 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none rounded-3xl">
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-electric/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+            <div className="absolute top-0 right-0 w-[550px] h-[550px] bg-electric/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-[550px] h-[550px] bg-blue-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
         </div>
 
         <div className="relative z-10">

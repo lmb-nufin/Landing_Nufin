@@ -9,15 +9,15 @@ export function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
 
   return (
-    <section id="inicio" className="relative pt-20 lg:pt-24 pb-8 lg:pb-12 px-6 bg-white overflow-hidden">
-      <div className="max-w-6xl mx-auto bg-[#F8F7FF] rounded-3xl p-6 lg:p-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <section id="inicio" className="relative pt-24 pb-8 lg:pb-12 px-6 bg-white overflow-hidden">
+      <div className="max-w-6xl mx-auto bg-[#F8F7FF] rounded-3xl p-4 lg:p-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           
-          <div className="text-center lg:text-left space-y-2">
+          <div className="text-center lg:text-left space-y-2 self-center">
             <h1 className="text-3xl md:text-5xl font-display font-black text-gray-900 leading-[1.1]">
               Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
             </h1>
-            <p className="text-sm text-gray-600 font-medium max-w-md mx-auto lg:mx-0">
+            <p className="text-sm text-gray-600 font-medium max-w-md mx-auto lg:mx-0 pb-2">
               De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$9,000 MXN</span> directos a tu cuenta desde tu celular.
             </p>
             <Button size="default" className="font-bold text-base px-8">
@@ -26,8 +26,8 @@ export function HeroSection() {
           </div>
 
           <div className="relative w-full flex flex-col items-center lg:items-end">
-            <div className="h-5 hidden lg:block" />
-            <div className="relative w-full max-w-[280px] md:max-w-sm aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
+            <div className="h-10 hidden lg:block" />
+            <div className="relative w-full max-w-xl aspect-[4/3] rounded-3xl overflow-hidden shadow-xl">
               <Image 
                 src={heroImage?.imageUrl || "/images/hero-placeholder.svg"} 
                 alt={heroImage?.description || "A person using the Nufin app on their phone."}
