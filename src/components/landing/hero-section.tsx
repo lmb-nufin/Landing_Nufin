@@ -9,7 +9,7 @@ export function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
 
   return (
-    <section id="inicio" className="relative pt-24 bg-white overflow-hidden">
+    <section id="inicio" className="relative pt-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center bg-[#F8F7FF] rounded-3xl p-4 lg:p-6">
           
