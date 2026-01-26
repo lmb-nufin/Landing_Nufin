@@ -9,9 +9,9 @@ export function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
 
   return (
-    <section id="inicio" className="relative pt-24 pb-8 lg:pb-12 px-6 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto bg-[#F8F7FF] rounded-3xl p-4 lg:p-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+    <section id="inicio" className="relative py-4 px-6 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center bg-[#F8F7FF] rounded-3xl p-4 lg:p-6">
           
           <div className="lg:col-span-1 text-center lg:text-left space-y-2 self-center">
             <h1 className="text-3xl md:text-5xl font-display font-black text-gray-900 leading-[1.1]">
@@ -32,7 +32,7 @@ export function HeroSection() {
                 alt={heroImage?.description || "A person using the Nufin app on their phone."}
                 fill
                 priority
-                className="object-cover"
+                className="object-cover object-top"
                 data-ai-hint={heroImage?.imageHint || "person phone"}
               />
               <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-white/90 backdrop-blur-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2 z-20 animate-float">
