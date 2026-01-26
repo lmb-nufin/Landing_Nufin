@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-image",
-      "description": "A happy woman looking at her phone, representing financial satisfaction with Nufin.",
-      "imageUrl": "https://images.unsplash.com/photo-1596700201454-3c6c9a9257d7?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "imageHint": "happy woman phone"
+      "description": "A happy Latina woman in a cafe, smiling as she looks at her phone, representing financial satisfaction with Nufin.",
+      "imageUrl": "https://images.unsplash.com/photo-1593106578502-27fa8479d060?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "latina woman phone"
     }
   ]
 }
