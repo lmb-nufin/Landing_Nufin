@@ -3,7 +3,7 @@
     {
       "id": "hero-image",
       "description": "Una mujer de 30 años, feliz, usando su celular.",
-      "imageUrl": "https://images.unsplash.com/photo-1610641838258-b2ad39316b25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1080&auto=format&fit=crop&q=60",
       "imageHint": "happy woman phone"
     }
   ]

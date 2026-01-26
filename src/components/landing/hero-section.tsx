@@ -31,6 +31,7 @@ export function HeroSection() {
                 src={heroImage?.imageUrl || "/images/hero-placeholder.svg"} 
                 alt={heroImage?.description || "A person using the Nufin app on their phone."}
                 fill
+                priority
                 className="object-cover"
                 data-ai-hint={heroImage?.imageHint || "person phone"}
               />
