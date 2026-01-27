@@ -1,12 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
-  const heroImage = PlaceHolderImages.find((img) => img.id === "hero-image");
 
   return (
     <section id="inicio" className="relative pt-20 bg-white overflow-hidden">
@@ -28,12 +26,11 @@ export function HeroSection() {
           <div className="lg:col-span-2 relative w-full flex flex-col items-center lg:items-end">
             <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl">
               <Image 
-                src={heroImage?.imageUrl || "/images/hero-placeholder.svg"} 
-                alt={heroImage?.description || "A person using the Nufin app on their phone."}
+                src="/images/hero.png" 
+                alt="Mujer feliz usando la app de Nufin"
                 fill
                 priority
-                className="object-cover"
-                data-ai-hint={heroImage?.imageHint || "person phone"}
+                className="object-cover object-center"
               />
               <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-white/90 backdrop-blur-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2 z-20 animate-float">
                 <CheckCircle2 size={16} className="text-emerald-500" />
