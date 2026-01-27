@@ -32,6 +32,7 @@ export function HeroSection() {
                 fill
                 priority
                 className="object-cover object-center"
+                unoptimized={true}
               />
               <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-white/90 backdrop-blur-sm py-2 px-4 rounded-full shadow-lg flex items-center gap-2 z-20 animate-float">
                 <CheckCircle2 size={16} className="text-emerald-500" />
