@@ -115,7 +115,7 @@ export default {
         'marquee': 'marquee 50s linear infinite',
         'float': 'float 4s ease-in-out infinite',
         'shimmer': 'shimmer 1.5s infinite',
-        'fade-in': 'fade-in 4s ease-out forwards',
+        'fade-in': 'fade-in 2s ease-out forwards',
       },
     },
   },
