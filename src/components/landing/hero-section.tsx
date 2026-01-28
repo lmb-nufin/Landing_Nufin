@@ -3,15 +3,25 @@
 import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState, useEffect } from 'react';
+import { cn } from "@/lib/utils";
 
 export function HeroSection() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <section id="inicio" className="relative pt-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center bg-[#F8F7FF] rounded-3xl p-4 lg:p-6">
           
-          <div className="lg:col-span-1 text-center lg:text-left space-y-2 self-center animate-fade-in">
+          <div className={cn(
+            "lg:col-span-1 text-center lg:text-left space-y-2 self-center",
+            isClient ? "animate-fade-in" : "opacity-0"
+          )}>
             <h1 className="text-3xl md:text-5xl font-display font-black text-gray-900 leading-[1.1]">
               Préstamos<br/>al instante,<br/><span className="text-electric">sin buró</span>
             </h1>
@@ -23,7 +33,10 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="lg:col-span-2 relative w-full flex flex-col items-center lg:items-end animate-fade-in delay-500">
+          <div className={cn(
+            "lg:col-span-2 relative w-full flex flex-col items-center lg:items-end",
+            isClient ? "animate-fade-in" : "opacity-0"
+          )}>
             <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl">
               <Image 
                 src="/images/hero.png" 
