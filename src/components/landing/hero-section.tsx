@@ -24,7 +24,7 @@ export function HeroSection() {
             </Button>
           </div>
 
-          <div className="lg:col-span-2 relative w-full flex flex-col items-center lg:items-end animate-in fade-in zoom-in-95 duration-[6000ms] delay-300">
+          <div className="lg:col-span-2 relative w-full flex flex-col items-center lg:items-end animate-in fade-in zoom-in-95 duration-[6000ms] delay-1000">
             <div className="relative w-full aspect-[16/9] rounded-3xl overflow-hidden shadow-xl">
               <Image 
                 src="/images/hero.png" 
