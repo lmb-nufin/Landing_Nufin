@@ -23,7 +23,7 @@ export function HeroSection() {
             isClient ? "animate-fade-in" : "opacity-0"
           )}>
             <h1 className="text-3xl md:text-5xl font-display font-black text-gray-900 leading-[1.1]">
-              Préstamos<br/>inmediatos,<br/><span className="text-electric">sin historial</span>
+              Préstamos<br/>inmediatos,<br/><span className="text-deep-purple">sin historial</span>
             </h1>
             <p className="text-sm text-gray-600 font-medium max-w-md mx-auto lg:mx-0 pb-2">
               De <span className="font-bold text-gray-900">$500</span> a <span className="font-bold text-gray-900">$9,000 MXN</span> directos a tu cuenta desde tu celular.
