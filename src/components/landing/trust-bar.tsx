@@ -58,7 +58,7 @@ export function TrustBar() {
                     <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">Transparencia Total</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900 tracking-tight leading-tight">
-                    Resultados <span className="text-deep-purple">reales</span>
+                    Resultados <span className="text-deeppurple">reales</span>
                 </h2>
                 </div>
 

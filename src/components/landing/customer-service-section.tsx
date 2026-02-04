@@ -23,7 +23,7 @@ export function CustomerServiceSection() {
             <span className="text-[10px] font-black uppercase tracking-[0.2em] text-electric">Soporte Real</span>
         </div>
         <h2 className="text-3xl md:text-4xl font-display font-black text-gray-900 tracking-tighter leading-tight mb-6">
-          ¿Necesitas <span className="text-deep-purple">Ayuda</span>?
+          ¿Necesitas <span className="text-deeppurple">Ayuda</span>?
         </h2>
         <p className="text-sm text-gray-500 font-medium max-w-2xl mx-auto mb-12">
           Estamos aquí para ti. Contáctanos a través de nuestros canales oficiales y un humano te atenderá.

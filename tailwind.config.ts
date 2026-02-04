@@ -19,7 +19,7 @@ export default {
       colors: {
         electric: '#8E94F2',
         'electric-dark': '#7C83D9',
-        'deep-purple': '#4B1F93',
+        'deeppurple': '#4B1F93',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
